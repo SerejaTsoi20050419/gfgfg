@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <title>Document</title>
+</head>
+<style>
+.brand-grid {
+  width: 80%;
+  display: grid;
+  margin: 20px;
+  padding-left: 150px;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 10px;
+  margin-bottom: 0px;
+}
+ 
+.collapsed {
+  display: none;
+}
+
+.brand-list {
+  width: 60%;
+  display: grid;
+  margin: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  padding-left: 149px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+#toggle-button {
+  background-color: #fff;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 30px;
+  margin-left: 140px;
+}
+
+#toggle-text {
+  margin-left: 10px;
+}
+
+.brand-card {
+  border: 1px solid #eee;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-card img {
+  max-height: 40px;
+}
+
+.brand-logo {
+  max-height: 40px;
+  max-width: 100px;
+}
+
+.arrow-button {
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow-button4 {
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow-button5 {
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow-button1 {
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow-button2 {
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow-button3 {
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow-button6{
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow-button7 {
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow-button8 {
+  background-color: #fff;
+  border: 2px solid #f06ca3;
+  border-radius: 50%;
+  font-size: 21px;
+  width: 27px;
+  height: 27px;
+  color: #f06ca3;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.arrow-button:hover {
+  background-color: #ff2b8a;
+  color: #fff;
+}
+
+.fd {
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+}
+.brand-card4 {
+  border: 1px solid #eee;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand-card8 {
+  border: 1px solid #eee;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#toggle-icon {
+  margin-left: 20px;
+  margin-bottom: 3px;
+  vertical-align:middle;
+}
+.swiper-container {
+  display: none;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+  .swiper-container {
+    display: block;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 320px;
+  }
+  .brand-grid,
+  #brand-list,
+  #toggle-button {
+    display: none !important;
+  }
+  .arrow-button {
+    margin-left: 108px;
+    margin-top: -15px;
+  }
+  .swiper-slide {
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* можно заменить на center или space-around */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.brand-logo4 {
+  padding: 10px;
+}
+.brand-logo {
+  padding: 5px;
+}
+.brand-logo3 {
+  padding: -30px;
+}
+.brand-logo2 {
+  padding: -10px;
+}
+.arrow-button4 {
+  margin-left: 50px;
+}
+.brand-logo5 {
+  padding: 5px;
+}
+.brand-logo6 {
+  width: 15%;
+}
+.brand-logo7 {
+  width: 35%;
+  padding: 7px;
+}
+.brand-logo8 {
+  padding: 5px;
+}
+}
+ 
+
+
+@media (max-width: 768px) {
+  .brand-grid {
+    display: grid;
+    margin-left: -150px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+  }
+  .brand-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    margin-left: -150px;
+  }
+  .brand-card4 {
+    display: none;
+  }
+  .brand-card8 {
+    display: none;
+  }
+  #toggle-button {
+    margin-left: -30px;
+  }
+}
+</style>
+<body>
+  <div class="swiper-container" id="brand-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img class="brand-logo" src="img/Bitmap.png" alt="Lenovo"><div class="arrow-button1">></div></div>
+    <div class="swiper-slide"><img class="brand-logo2" src="img/samsung.png" alt="Samsung"><div class="arrow-button2">></div></div>
+    <div class="swiper-slide"><img class="brand-logo3" src="img/Apple.png" alt="Apple"><div class="arrow-button3">></div></div>
+    <div class="swiper-slide"><img class="brand-logo4" src="img/Viewsonic.png" alt="ViewSonic"><div class="arrow-button4">></div></div>
+    <div class="swiper-slide"><img class="brand-logo5" src="img/Bosch.png" alt="Bosch"><div class="arrow-button5">></div></div>
+    <div class="swiper-slide"><img class="brand-logo6" src="img/Hp.png" alt="Hp"><div class="arrow-button6">></div></div>
+    <div class="swiper-slide"><img class="brand-logo7" src="img/Acer.png" alt="Acer"><div class="arrow-button7">></div></div>
+    <div class="swiper-slide"><img class="brand-logo8" src="img/Sony.png" alt="Sony"><div class="arrow-button8">></div></div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+  <div class="brand-grid">
+    <div class="brand-card"><img class="brand-logo" src="img/Bitmap.png" alt="Lenovo"><div class="arrow-button">></div></div>
+    <div class="brand-card"><img class="brand-logo" src="img/samsung.png" alt="Samsung"><div class="arrow-button">></div></div>
+    <div class="brand-card"><img class="brand-logo" src="img/Apple.png" alt="Apple"><div class="arrow-button">></div></div>
+    <div class="brand-card4"><img class="brand-logo" src="img/Viewsonic.png" alt="ViewSonic"><div class="arrow-button">></div></div>
+    <div class="brand-card"><img class="brand-logo" src="img/Bosch.png" alt="Bosch"><div class="arrow-button">></div></div>
+    <div class="brand-card"><img class="brand-logo" src="img/Hp.png" alt="HP"><div class="arrow-button">></div></div>
+    <div class="brand-card"><img class="brand-logo" src="img/Acer.png" alt="Acer"><div class="arrow-button">></div></div>
+    <div class="brand-card8"><img class="brand-logo" src="img/Sony.png " alt="Sony"><div class="arrow-button">></div></div>
+  </div>
+    <div class="collapsed" id="brand-list">
+    <div class="brand-card"><img class="brand-logo" src="img/Bitmap.png" alt="Lenovo"><div class="arrow-button">></div></div>
+    <div class="brand-card"><img class="brand-logo" src="img/samsung.png" alt="Samsung"><div class="arrow-button">></div></div>
+    <div class="brand-card"><img class="brand-logo" src="img/Apple.png" alt="Apple"><div class="arrow-button">></div></div>
+  </div>
+
+  <button id="toggle-button">
+    <img id="toggle-icon" src="img/thrt.png" alt="Показать все"/>
+    <span id="toggle-text">Показать все</span>
+  </button>
+  
+  <script>
+    const toggleButton = document.getElementById('toggle-button');
+    const toggleText = document.getElementById('toggle-text');
+    const toggleIcon = document.getElementById('toggle-icon');
+    const brandList = document.getElementById('brand-list');
+
+  toggleButton.addEventListener('click', () => {
+    const isExpanded = brandList.classList.contains('expanded');
+  
+  brandList.classList.toggle('expanded');
+  brandList.classList.toggle('brand-list');
+  
+  toggleText.textContent = isExpanded ? 'Показать все' : 'Скрыть';
+  toggleIcon.src = isExpanded ? 'img/thrt.png' : 'img/expand.png';
+  toggleIcon.alt = isExpanded ? 'Показать все' : 'Скрыть';
+});
+
+
+</script>
+<script>
+  function initSwiperIfNeeded() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 320) {
+      document.querySelector('.brand-grid').style.display = 'none';
+      document.getElementById('brand-list').style.display = 'none';
+      document.getElementById('toggle-button').style.display = 'none';
+      document.getElementById('brand-swiper').style.display = 'block';
+
+      new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else {
+      document.getElementById('brand-swiper').style.display = 'none';
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', initSwiperIfNeeded);
+  window.addEventListener('resize', initSwiperIfNeeded);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
